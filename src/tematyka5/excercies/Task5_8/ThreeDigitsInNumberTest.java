@@ -1,4 +1,4 @@
-package Task5_8;
+package tematyka5.excercies.Task5_8;
 
 /**
  * Created by BIURO22 on 2023-01-19

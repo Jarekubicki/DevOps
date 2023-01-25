@@ -1,7 +1,6 @@
-package Task5_16;
+package tematyka5.excercies.Task5_16;
 
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by BIURO22 on 2023-01-24

@@ -1,4 +1,4 @@
-package Task5_15;
+package tematyka5.excercies.Task5_15;
 
 import java.util.ArrayList;
 
