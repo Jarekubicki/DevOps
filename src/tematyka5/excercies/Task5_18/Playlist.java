@@ -59,10 +59,10 @@ public class Playlist {
                 System.out.println("Album added to playlist.");
                 break;
             }
-            default: {
-                System.out.println("No such choice available.");
+            default: {System.out.println("No such choice available.");
             }
         }
+        System.out.println("test");
 
 //        if (userTaskToPerform.equals(Task.FIND_ALBUM_IN_LIST)) {
 //            data.printAskForAlbumName();
