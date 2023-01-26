@@ -1,6 +1,8 @@
 package tematyka5.excercies.Task5_15;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 /**
  * Created by BIURO22 on 2023-01-24
@@ -9,21 +11,14 @@ public class ColorTest {
     public static void main(String[] args) {
 
 
-        String[] colorsArray = {Colors.WHITE.getDescription(), Colors.BLACK.getDescription(), Colors.GREEN.getDescription(),
-                Colors.BLUE.getDescription(), Colors.RED.getDescription(), Colors.YELLOW.getDescription(),
-                Colors.ORANGE.getDescription(), Colors.PINK.getDescription()};
-
-        ArrayList<String> colorsList = new ArrayList<>();
-
-        for (String color : colorsArray) {
-            colorsList.add(color);
-        }
+        ArrayList<String> colorsList = new ArrayList<>(Arrays.asList("white", "black", "green", "blue", "red",
+                "yellow", "orange", "pink"));
 
         iterateTheList(colorsList);
         replaceArrayListFifthElement(colorsList);
         addElementAtListBeginning(colorsList);
         sortTheList(colorsList);
-        ArrayList<String> reversedColours = reverseArrayOrder(colorsList);
+        reverseArrayOrder(colorsList);
     }
 
 
@@ -41,15 +36,12 @@ public class ColorTest {
     }
 
     static void sortTheList(ArrayList<String> list) {
+        Collections.sort(list);
 
     }
 
-    static ArrayList<String> reverseArrayOrder(ArrayList<String> list) {
-        ArrayList<String> reversedColours = new ArrayList<>();
-        for (int i = list.size() - 1; i > -1; i--) {
-            reversedColours.add(list.get(i));
-        }
-        return reversedColours;
+    static void reverseArrayOrder(ArrayList<String> list) {
+        Collections.reverse(list);
     }
 
 }

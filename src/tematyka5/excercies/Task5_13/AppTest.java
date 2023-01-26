@@ -21,11 +21,14 @@ public class AppTest {
             }
         } while (!userWord.equalsIgnoreCase(KEY_WORD));
 
-        int middleElementOfList = (wordList.size() / 2);
 
-        dataEntry.printUserWordsListLength(wordList);
-        dataEntry.printListFirstElement(wordList);
-        dataEntry.printListLastElement(wordList);
-        dataEntry.printListMiddleElement(middleElementOfList, wordList);
+        if(!wordList.isEmpty()) {
+            int middleElementOfList = (wordList.size() / 2);
+
+            dataEntry.printUserWordsListLength(wordList);
+            dataEntry.printListFirstElement(wordList);
+            dataEntry.printListLastElement(wordList);
+            dataEntry.printListMiddleElement(middleElementOfList, wordList);
+        }
     }
 }

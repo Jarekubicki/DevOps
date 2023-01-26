@@ -9,8 +9,7 @@ public class DataInput {
 
     public String enterAlbumName() {
         Scanner input = new Scanner(System.in);
-        String albumName;
-        return albumName = input.nextLine();
+        return input.nextLine();
     }
 
 }

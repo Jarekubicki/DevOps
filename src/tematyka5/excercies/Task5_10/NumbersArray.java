@@ -11,21 +11,19 @@ import java.util.Arrays;
 public class NumbersArray {
     public static void main(String[] args) {
 
-        int number = 0;
+        int number = 1;
         int[][] numbers = new int[10][3];
 
 
         for (int i = 0; i < numbers.length; i++) {
             for (int j = 0; j < 3; j++) {
                 if (j == 0) {
-                    numbers[i][j] = number + 1;
+                    numbers[i][j] = number;
                     number++;
-                }
-                else if (j == 1) {
-                    numbers[i][j] = (numbers[i][j - 1] * numbers[i][j - 1]);
-                }
-                else if (j == 2) {
-                    numbers[i][j] = (numbers[i][j - 2] * numbers[i][j - 2] * numbers[i][j - 2]);
+                } else if (j == 1) {
+                    numbers[i][j] = (int) Math.pow(numbers[i][j - 1], 2);
+                } else if (j == 2) {
+                    numbers[i][j] = (int) Math.pow(numbers[i][j - 2], 3);
                 }
             }
         }
