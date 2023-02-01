@@ -12,7 +12,17 @@ public class ColorsCollection {
                 "fioletowy", "granatowy", "niebieski", "czarny", "czarny", "zielony", "cytrynowy", "granatowy",
                 "niebieski", "indygo", "zielony", "czerwony"));
 
-        HashSet<String> colorsSet = new HashSet<>(Set.copyOf(colorsArray));
+        List<String> stringList = List.of("zielony", "czerwony", "niebieski", "czarny",
+                "fioletowy", "granatowy", "niebieski", "czarny", "czarny", "zielony", "cytrynowy", "granatowy",
+                "niebieski", "indygo", "zielony", "czerwony");
+
+        Iterator<String> iterator = stringList.iterator();
+
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+        HashSet<String> colorsSet = new HashSet<>(colorsArray);
 
         System.out.println("Number of elements in array = " + colorsArray.size());
         System.out.println("Number of unique elements in array = " + colorsSet.size());

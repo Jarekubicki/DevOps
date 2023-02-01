@@ -12,22 +12,15 @@ public class NumbersArray {
     public static void main(String[] args) {
 
         int number = 1;
-        int[][] numbers = new int[10][3];
+        int[][] numbers = new int[12][5];
 
 
         for (int i = 0; i < numbers.length; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (j == 0) {
-                    numbers[i][j] = number;
-                    number++;
-                } else if (j == 1) {
-                    numbers[i][j] = (int) Math.pow(numbers[i][j - 1], 2);
-                } else if (j == 2) {
-                    numbers[i][j] = (int) Math.pow(numbers[i][j - 2], 3);
-                }
+            for (int j = 0; j < numbers[i].length; j++) {
+                numbers[i][j] = (int)Math.pow(i + 1, j + 1);
             }
         }
-
+        System.out.println(Arrays.deepToString(numbers));
 
         for (int[] ints : numbers) {
             System.out.println(Arrays.toString(ints));
