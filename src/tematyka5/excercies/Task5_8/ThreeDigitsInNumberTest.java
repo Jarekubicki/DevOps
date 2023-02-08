@@ -11,7 +11,7 @@ public class ThreeDigitsInNumberTest {
 
 
         int numberOfThreeDigitNumber = checkOneDimensionArray(numbers);
-        System.out.println("Number of 3 digit numbers = " + numberOfThreeDigitNumber);
+        System.out.println("Number of 3 digit xl numbers = " + numberOfThreeDigitNumber);
 
 
         int numberOfThreeDigitNumber2 = checkTwoDimensionTable(numbers2D);
