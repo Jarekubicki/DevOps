@@ -3,17 +3,13 @@ package tematyka8.excercises.Task8_8;
 /**
  * Created by BIURO22 on 2023-02-07
  */
-public class Warning extends Message{
+public class Warning {
 
-    String warningMessage = "Watch out! Warning here!";
-    int counter;
+    static String warningMessage = "Watch out! Warning here!";
+    static int counter = 0;
 
-
-   public void execute() {
-       counter++;
-       System.out.println(warningMessage);
-       System.out.println("Total times message WARNING displayed = " + counter);
-   }
-
-
+    static void execute() {
+        counter++;
+        System.out.println("Total message WARNING displayed = " + counter);
+    }
 }

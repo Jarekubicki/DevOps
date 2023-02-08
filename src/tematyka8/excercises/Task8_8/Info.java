@@ -3,16 +3,14 @@ package tematyka8.excercises.Task8_8;
 /**
  * Created by BIURO22 on 2023-02-07
  */
-public class Info extends Message {
+public class Info {
 
-    String infoMessage = "Listen carefully. We have some information regarding ...";
-    int counter;
+    static String infoMessage = "Listen carefully. We have some information regarding ...";
+    static int counter = 0;
 
-    @Override
-    public void execute() {
+    static void execute() {
         counter++;
-        System.out.println(infoMessage);
-        System.out.println("Total times message INFO displayed = " + counter);
+        System.out.println("Total message INFO displayed = " + infoMessage);
     }
 
 }
