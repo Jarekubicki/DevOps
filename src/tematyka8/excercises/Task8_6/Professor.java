@@ -5,7 +5,7 @@ package tematyka8.excercises.Task8_6;
  */
 public class Professor extends Person {
 
-    int salary;
+    private int salary;
 
     public Professor(String name, int phoneNumber, String email, int salary) {
         super(name, phoneNumber, email);

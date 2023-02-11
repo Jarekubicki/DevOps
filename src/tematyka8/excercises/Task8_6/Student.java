@@ -5,8 +5,9 @@ package tematyka8.excercises.Task8_6;
  */
 public class Student extends Person{
 
-    int studentNumber;
-    double averageMark;
+    private int studentNumber;
+    private double averageMark;
+    private final int MIN_PASS_RANK = 3;
 
     public Student(String name, int phoneNumber, String email, int studentNumber, double averageMark) {
         super(name, phoneNumber, email);
@@ -20,15 +21,13 @@ public class Student extends Person{
         super.purchaseParkingPass();
     }
 
-
     public boolean isEligibleToEnroll() {
-        return true;
+        return averageMark > MIN_PASS_RANK;
     }
 
     public void getSeminarsTaken() {
 
     }
-
 }
 
 

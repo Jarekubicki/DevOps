@@ -5,10 +5,10 @@ package tematyka8.excercises.Task8_6;
  */
 public class Person {
 
-    String name;
-    int phoneNumber;
-    String email;
-    Address address;
+    protected String name;
+    protected int phoneNumber;
+    protected String email;
+    protected Address address;
 
     public Person(String name, int phoneNumber, String email) {
         this.name = name;
