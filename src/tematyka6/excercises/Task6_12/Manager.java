@@ -10,7 +10,7 @@ public class Manager {
 
     private HashMap<Order, Integer> ordersStock = new HashMap<>();
 
-    public boolean checkIfOrderOnList(HashMap<Order, Integer> orderList, Order orderToCheck) {
+    private boolean checkIfOrderOnList(HashMap<Order, Integer> orderList, Order orderToCheck) {
         return orderList.containsKey(orderToCheck);
     }
 

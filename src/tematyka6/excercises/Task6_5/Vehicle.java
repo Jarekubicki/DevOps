@@ -8,9 +8,8 @@ public class Vehicle {
     private float mileage = 0;
 
     public float addMileage(float kilometers) {
-        return mileage + kilometers;
+        return mileage += kilometers;
     }
-
 
 
     public int getMaxSpeed() {
