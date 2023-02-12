@@ -5,8 +5,8 @@ package tematyka8.excercises.Task8_4;
  */
 public class Vehicle {
 
-    int maxSpeed;
-    int lineNumber;
+    protected int maxSpeed;
+    protected int lineNumber;
     Depot depot;
 
     public Vehicle(int maxSpeed, int lineNumber, Depot depot) {
@@ -16,6 +16,7 @@ public class Vehicle {
     }
 
     public void showInfo() {
-        System.out.println("max speed = " + maxSpeed + ", line number = " + lineNumber + ", depot name = " + depot.name);
+        System.out.println("max speed = " + maxSpeed + ", line number = " + lineNumber + ", depot name = " +
+                depot.getName());
     }
 }

@@ -5,7 +5,7 @@ package tematyka8.excercises.Task8_4;
  */
 public class Bus extends Vehicle{
 
-    int fuelUsageInMonth;
+    private int fuelUsageInMonth;
 
 
     public Bus(int maxSpeed, int lineNumber, BusDepot busDepot, int fuelUsageInMonth) {
@@ -25,7 +25,11 @@ public class Bus extends Vehicle{
                 "fuelUsageInMonth = " + fuelUsageInMonth +
                 ", maxSpeed = " + maxSpeed +
                 ", lineNumber = " + lineNumber +
-                ", depot = " + depot.name +
+                ", depot = " + depot.getName() +
                 '}';
+    }
+
+    public int getFuelUsageInMonth() {
+        return fuelUsageInMonth;
     }
 }
