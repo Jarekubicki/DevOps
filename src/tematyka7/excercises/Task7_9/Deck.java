@@ -10,18 +10,15 @@ import java.util.Random;
  */
 public class Deck {
 
-    private Card card = new Card();
     private ArrayList<Card> deck = new ArrayList<>();
-    private final int DECK_SIZE = card.getSUITES().length * card.getVALUES().length;
+    private final int deckSize = Card.SUITES.length * Card.VALUES.length;
+    private Random random = new Random();
 
     public void createDeck() {
 
-        for (int i = 0; i < card.getVALUES().length; i++) {
-            for(int j = 0; j < card.getSUITES().length; j++) {
-                String value = card.getVALUES()[i];
-                String suite = card.getSUITES()[j];
-                card = new Card(value, suite);
-                deck.add(card);
+        for (int i = 0; i < Card.VALUES.length; i++) {
+            for (int j = 0; j < Card.SUITES.length; j++) {
+                deck.add(new Card(Card.VALUES[i], Card.SUITES[j]));
             }
         }
     }
@@ -31,9 +28,7 @@ public class Deck {
     }
 
     public Card pickRandomCardFromDeck() {
-        Random random = new Random();
-        int index = random.nextInt(DECK_SIZE);
-        return deck.get(index);
+        return deck.get(random.nextInt(deckSize));
     }
 
     public Card getLastCardInDeck() {
