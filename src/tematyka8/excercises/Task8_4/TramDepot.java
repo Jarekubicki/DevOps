@@ -7,33 +7,26 @@ import java.util.ArrayList;
  */
 public class TramDepot extends Depot {
 
-    ArrayList<Tramway> tramListAssignedToDepot;
+    private int totalCarts = 0;
 
-    public TramDepot(String name, ArrayList<Vehicle> vehicleInDepot) {
-        super(name, vehicleInDepot);
+    public TramDepot(String name) {
+        super(name);
     }
-
 
     @Override
     public void showInfo() {
         super.showInfo();
-        int carsCounter = 0;
-        String depotCategory = this.getClass().getSimpleName();
-        System.out.println("depot type = " + depotCategory);
-        System.out.println("Tramways assigned to depot: ");
-        for (Tramway tram : tramListAssignedToDepot) {
-            System.out.println(tram.toString());
-            carsCounter += tram.getNumberOfCarsInTramSet();
-        }
-        System.out.println("Total number of cars in depot: " + carsCounter);
-
+        System.out.println("depot type = " + TramDepot.class);
+        System.out.println("Depot name: " + this.name);
+        System.out.println("Trams assigned to depot: " + this.vehicles);
+        System.out.println("Total carts in depot = " + totalCarts);
     }
 
-    public ArrayList<Tramway> getTramListAssignedToDepot() {
-        return tramListAssignedToDepot;
+    @Override
+    public void addVehicle(Vehicle vehicle) {
+        Tramway tramway = (Tramway) vehicle;
+        vehicles.add(tramway);
+        totalCarts += tramway.getNumberOfCarsInTramSet();
     }
 
-    public void setTramListAssignedToDepot(ArrayList<Tramway> tramListAssignedToDepot) {
-        this.tramListAssignedToDepot = tramListAssignedToDepot;
-    }
 }

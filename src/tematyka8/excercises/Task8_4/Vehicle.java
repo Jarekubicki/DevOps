@@ -7,16 +7,15 @@ public class Vehicle {
 
     protected int maxSpeed;
     protected int lineNumber;
-    Depot depot;
+    protected String depot;
 
-    public Vehicle(int maxSpeed, int lineNumber, Depot depot) {
+    public Vehicle(int maxSpeed, int lineNumber, String depot) {
         this.maxSpeed = maxSpeed;
         this.lineNumber = lineNumber;
         this.depot = depot;
     }
 
     public void showInfo() {
-        System.out.println("max speed = " + maxSpeed + ", line number = " + lineNumber + ", depot name = " +
-                depot.getName());
+        System.out.println("max speed = " + maxSpeed + ", line number = " + lineNumber + ", depot name = " + depot);
     }
 }

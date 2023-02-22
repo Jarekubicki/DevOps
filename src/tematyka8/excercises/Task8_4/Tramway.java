@@ -5,13 +5,16 @@ package tematyka8.excercises.Task8_4;
  */
 public class Tramway extends Vehicle{
 
-    private final int MAX_CARS_IN_TRAM_SET = 3;
     private int numberOfCarsInTramSet;
 
 
-    public Tramway(int maxSpeed, int lineNumber, Depot depot, int numberOfCarsInTramSet) {
+    public Tramway(int maxSpeed, int lineNumber, String depot, int numberOfCarsInTramSet) {
         super(maxSpeed, lineNumber, depot);
         this.numberOfCarsInTramSet = numberOfCarsInTramSet;
+    }
+
+    public int getNumberOfCarsInTramSet() {
+        return numberOfCarsInTramSet;
     }
 
     @Override
@@ -20,23 +23,13 @@ public class Tramway extends Vehicle{
         System.out.print("; number of cars in tramway set = " + numberOfCarsInTramSet);
     }
 
-    public int getNumberOfCarsInTramSet() {
-        return numberOfCarsInTramSet;
-    }
-
-    public void setNumberOfCarsInTramSet(int numberOfCarsInTramSet) {
-        this.numberOfCarsInTramSet = numberOfCarsInTramSet;
-    }
-
     @Override
     public String toString() {
         return "Tramway{" +
                 "number of cars in tramSet = " + numberOfCarsInTramSet +
                 ", maxSpeed = " + maxSpeed +
                 ", lineNumber = " + lineNumber +
-                ", depot = " + depot.getName() +
+                ", depot = " + depot +
                 '}';
-
-
     }
 }

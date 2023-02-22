@@ -8,9 +8,14 @@ public class Bus extends Vehicle{
     private int fuelUsageInMonth;
 
 
-    public Bus(int maxSpeed, int lineNumber, BusDepot busDepot, int fuelUsageInMonth) {
+    public Bus(int maxSpeed, int lineNumber, String busDepot, int fuelUsageInMonth) {
         super(maxSpeed, lineNumber, busDepot);
         this.fuelUsageInMonth = fuelUsageInMonth;
+    }
+
+
+    public int getFuelUsageInMonth() {
+        return fuelUsageInMonth;
     }
 
     @Override
@@ -25,11 +30,7 @@ public class Bus extends Vehicle{
                 "fuelUsageInMonth = " + fuelUsageInMonth +
                 ", maxSpeed = " + maxSpeed +
                 ", lineNumber = " + lineNumber +
-                ", depot = " + depot.getName() +
+                ", depot = " + depot +
                 '}';
-    }
-
-    public int getFuelUsageInMonth() {
-        return fuelUsageInMonth;
     }
 }
